@@ -19,7 +19,44 @@ const app = new Vue({
     el: '#app',
     data: {
 
-        message:'Hello Vue!'
+        message:'Hello Vue!',
+        seen: false,
+        todos: [
+
+            {
+
+                name: 'Learn JC',
+                done: true,
+                priority: 27
+
+            },
+            {
+
+                name: 'Learn PHP',
+                done: false,
+                priority: 13
+
+            },
+            {
+
+                name: 'Learn Pa',
+                done: false,
+                priority: 23
+
+            }
+
+        ]
+
+
+    },
+
+    methods: {
+
+      reverseMessage: function() {
+          this.message = this.message.split('').reverse().join('');
+      }
 
     }
+
+
 });
